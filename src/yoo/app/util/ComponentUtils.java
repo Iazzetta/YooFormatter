@@ -77,7 +77,7 @@ public class ComponentUtils {
     private Color defaultBorderColor = null, hoverBorderColor = null;
     
     /**
-     * {@code defaultForegroundColor} e {code hoverForegroundColor} definem as cores
+     * {@code defaultForegroundColor} e {@code hoverForegroundColor} definem as cores
      * que serão usadas no texto de um componente quando houver o evento de <i>hover</i>.
      * {@code defaultForegroundColor} define a cor na fonte do componente em seu estado
      * normal. {@code hoverForegroundColor} define a cor na fonte do componente quando
