@@ -36,9 +36,8 @@ public class Save {
 
     /**
      * Gera um nome para o arquivo. O arquivo será nomeado seguindo o padrão:
-     * [nome da aplicação][dia-mês-ano][hora minutos segundos] para evitar possíveis
-     * problemas de duplicadas.
-     * @return uma <i>string</i> formatada com modelo semelhante à 'Foo[01-03-2015][18 33 45]
+     * [dia-mês-ano][hora minutos segundos] para evitar possíveis problemas de duplicadas.
+     * @return uma <i>string</i> formatada com modelo semelhante à '[01-03-2015][18 33 45]
      */
     private synchronized String createFileName(){
         return new SimpleDateFormat("[dd-MM-yyyy][hh mm ss]").format(new Date()) + ".txt";
