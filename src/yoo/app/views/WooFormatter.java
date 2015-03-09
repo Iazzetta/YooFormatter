@@ -50,8 +50,8 @@ public class WooFormatter extends JFrame {
 	private JButton bbcode_COLOR;
 	private JButton bbcode_CENTER;
 	private JButton bbcode_SIZE;
-	private JButton btnNewButton;
-	private JButton btnNewButton_1;
+	private JButton btnCopiar;
+	private JButton btnSalvar;
 
 	/**
 	 * Launch the application.
@@ -257,8 +257,8 @@ public class WooFormatter extends JFrame {
 		txtMensagem.setBounds(10, 170, 754, 193);
 		contentPane.add(txtMensagem);
 
-		btnNewButton = new JButton("COPIAR TUDO");
-		btnNewButton.addActionListener(new ActionListener() {
+		btnCopiar = new JButton("COPIAR TUDO");
+		btnCopiar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
 
 				StringSelection stringSelection = new StringSelection(
@@ -269,14 +269,14 @@ public class WooFormatter extends JFrame {
 
 			}
 		});
-		btnNewButton.setBackground(Color.LIGHT_GRAY);
-		btnNewButton.setBorder(null);
-		btnNewButton.setFont(new Font("Consolas", Font.PLAIN, 13));
-		btnNewButton.setBounds(626, 76, 138, 35);
-		contentPane.add(btnNewButton);
+		btnCopiar.setBackground(Color.LIGHT_GRAY);
+		btnCopiar.setBorder(null);
+		btnCopiar.setFont(new Font("Consolas", Font.PLAIN, 13));
+		btnCopiar.setBounds(626, 76, 138, 35);
+		contentPane.add(btnCopiar);
 
-		btnNewButton_1 = new JButton("SALVAR");
-		btnNewButton_1.addActionListener(new ActionListener() {
+		btnSalvar = new JButton("SALVAR");
+		btnSalvar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
 				String data = new SimpleDateFormat("[dd-MM-yyyy - HH.mm]")
@@ -299,10 +299,10 @@ public class WooFormatter extends JFrame {
 				}
 			}
 		});
-		btnNewButton_1.setBackground(Color.LIGHT_GRAY);
-		btnNewButton_1.setBorder(null);
-		btnNewButton_1.setBounds(627, 123, 138, 35);
-		contentPane.add(btnNewButton_1);
+		btnSalvar.setBackground(Color.LIGHT_GRAY);
+		btnSalvar.setBorder(null);
+		btnSalvar.setBounds(627, 123, 138, 35);
+		contentPane.add(btnSalvar);
 
 	}
 }
