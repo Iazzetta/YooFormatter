@@ -260,12 +260,22 @@ public class YooFormatter extends JFrame {
 		btnCopiar = new JButton("COPIAR TUDO");
 		btnCopiar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
+				
+				if (txtMensagem.getText() == null || txtMensagem.getText().equals("")) {
+					JOptionPane.showMessageDialog(null,
+							"Não tem nenhum conteúdo para ser copiado!", "ERRO",
+							JOptionPane.ERROR_MESSAGE);
+					return;
+				}
 
 				StringSelection stringSelection = new StringSelection(
 						txtMensagem.getText());
 				Clipboard clpbrd = Toolkit.getDefaultToolkit()
 						.getSystemClipboard();
 				clpbrd.setContents(stringSelection, null);
+				
+				JOptionPane.showMessageDialog(null, "Conteúdo copiado para o CTRL+C!",
+						"Copiado!", JOptionPane.INFORMATION_MESSAGE);
 
 			}
 		});
