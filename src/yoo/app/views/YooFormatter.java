@@ -30,7 +30,7 @@ import me.bbcode.BBcode;
 import me.bbcode.BBcodeFactory;
 import yoo.app.util.ColorPick;
 
-public class WooFormatter extends JFrame {
+public class YooFormatter extends JFrame {
 
 	/**
 	 * ID de serialização
@@ -60,7 +60,7 @@ public class WooFormatter extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					WooFormatter frame = new WooFormatter();
+					YooFormatter frame = new YooFormatter();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -77,7 +77,7 @@ public class WooFormatter extends JFrame {
 	 * ColorPick.instance().selectColor(null, "Testando");
 	 * System.out.println(ColorPick.instance().getSelectedHexColor());
 	 */
-	public WooFormatter() {
+	public YooFormatter() {
 		setUndecorated(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 771, 374);
@@ -110,7 +110,7 @@ public class WooFormatter extends JFrame {
 			public void mousePressed(MouseEvent arg0) {
 
 				// fechando
-				System.out.println("WooFormatter fechado.");
+				System.out.println("YooFormatter fechado.");
 				try {
 					Thread.sleep(50);
 				} catch (InterruptedException e) {
@@ -120,7 +120,7 @@ public class WooFormatter extends JFrame {
 				System.exit(0);
 			}
 		});
-		btnFechar.setIcon(new ImageIcon(WooFormatter.class
+		btnFechar.setIcon(new ImageIcon(YooFormatter.class
 				.getResource("/fechar.png")));
 		btnFechar.setBounds(748, 5, 16, 16);// 618
 		contentPane.add(btnFechar);
@@ -131,17 +131,17 @@ public class WooFormatter extends JFrame {
 			@Override
 			public void mousePressed(MouseEvent e) {
 
-				System.out.println("WooFormatter minimizado.");
+				System.out.println("YooFormatter minimizado.");
 				setState(JFrame.ICONIFIED);
 			}
 		});
-		btnMinimizar.setIcon(new ImageIcon(WooFormatter.class
+		btnMinimizar.setIcon(new ImageIcon(YooFormatter.class
 				.getResource("/minimizar.png")));
 		btnMinimizar.setBounds(728, 5, 16, 16);
 		contentPane.add(btnMinimizar);
 
 		Logo = new JLabel();
-		Logo.setIcon(new ImageIcon(WooFormatter.class.getResource("/logo.png")));
+		Logo.setIcon(new ImageIcon(YooFormatter.class.getResource("/logo.png")));
 		Logo.setBounds(205, 10, 352, 66);
 		contentPane.add(Logo);
 
